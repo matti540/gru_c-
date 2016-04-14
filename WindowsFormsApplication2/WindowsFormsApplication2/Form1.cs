@@ -24,9 +24,11 @@ namespace WindowsFormsApplication2
             
         }
 
+        // Takki til að skrá sig inn.
         private void signin_Click(object sender, EventArgs e)
         {
-
+            List<string> list = adferd.LesautSQLToflu("SELECT * FROM members WHERE username = '" + username + "' AND password = '" + password + "'");
+            MessageBox.Show(list.Count().ToString());
         }
     }
 }

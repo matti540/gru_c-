@@ -22,7 +22,7 @@ namespace WindowsFormsApplication2
         {
             server = "82.148.66.15";
             database = "gru_h7_lokaverkefni";
-            uid = "gru_h7";
+            uid = "GRU_H7";
             password = "mypassword";
             tengistrengur = "server= " + server + ";userid= " + uid + ";password= " + password + ";database= " + database;
             sqltenging = new MySqlConnection(tengistrengur);
@@ -95,13 +95,12 @@ namespace WindowsFormsApplication2
             }
         }
 
-        public List<string> LesautSQLToflu()
+        public List<string> LesautSQLToflu(string fyrirspurn)
         {
             List<string> Faerlsur = new List<string>();
             string lina = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT id_medlimur, nafn, netfang, simanumer FROM id";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 sqllesari = nySQLskipun.ExecuteReader();
                 while (sqllesari.Read())
@@ -114,7 +113,6 @@ namespace WindowsFormsApplication2
                     lina = null;
                 }
                 CloseConnection();
-                return Faerlsur;
             }
             return Faerlsur;
         }
