@@ -12,9 +12,69 @@ namespace WindowsFormsApplication2
 {
     public partial class Form2 : Form
     {
+        adferdir adferd = new adferdir();
         public Form2()
         {
+            adferd.TengingVidGagnagrunn();
             InitializeComponent();
+        }
+
+        string id = null;
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            listViewNotendur.Columns.Add("ID", 30);
+            listViewNotendur.Columns.Add("Notandanafn", 150);
+            listViewNotendur.Columns.Add("Lykilorð", 90);
+            listViewNotendur.Columns.Add("Posts", 50);
+            listViewNotendur.Columns.Add("Rank", 80);
+            listViewNotendur.Columns.Add("Banned", 60);
+
+            BirtaNotendur();
+        }
+
+        // Takki til að breyta upplýsingum um notanda.
+        private void btBreytaUpplysingum_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        // Bannar notanda
+        private void btBanna_Click(object sender, EventArgs e)
+        {
+            adferd.Uppfaera("UPDATE members SET banned = '1' WHERE id ='" + id + "'");
+            BirtaNotendur();
+        }
+
+        // Afléttir banni á notanda
+        private void btUnban_Click(object sender, EventArgs e)
+        {
+            adferd.Uppfaera("UPDATE members SET banned = '0' WHERE id ='" + id + "'");
+            BirtaNotendur();
+        }
+
+        // Þegar notandi er valinn úr listanum.
+        private void listViewNotendur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewNotendur.SelectedItems.Count > 0)
+            {
+                // Röðin sem notandinn valdi í list viewinu.
+                var row = listViewNotendur.SelectedItems[0];
+
+                id = row.SubItems[0].Text;
+            }
+        }
+
+        private void BirtaNotendur()
+        {
+            listViewNotendur.Items.Clear();
+
+            List<string> notendur = adferd.LesautSQLToflu("SELECT * FROM members");
+            foreach (var notandi in notendur)
+            {
+                ListViewItem itm = new ListViewItem(notandi.Split(':'));
+                listViewNotendur.Items.Add(itm);
+            }
         }
     }
 }

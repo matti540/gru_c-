@@ -51,12 +51,10 @@ namespace WindowsFormsApplication2
             }
         }
 
-        public void Uppfarea(string kt, string nafn, string net, string simi)
+        public void Uppfaera(string fyrirspurn)
         {
             if (OpenConnection() == true)
             {
-                fyrirspurn = "UPDATE id SET id_medlimur ='" + kt + "', nafn='" + nafn + "', netfang='" + net + "', simanumer='"
-                    + simi + "' WHERE id_medlimur='" + kt + "'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();

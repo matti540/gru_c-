@@ -33,12 +33,19 @@ namespace WindowsFormsApplication2
                 string[] upplysingar = list[0].Split(':');
                 if (upplysingar[4] == "Moderator" || upplysingar[4] == "Administrator")
                 {
-                    Form2 form = new Form2();
-                    form.Show();
+                    if (upplysingar[5] == "0" || upplysingar[4] == "Administrator")
+                    {
+                        Form2 form = new Form2();
+                        form.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("BANNED");
+                    }
                 }
                 else 
                 {
-                    MessageBox.Show("Notandi þarf að vera moderator eða administrator til að komast inn.");
+                    MessageBox.Show("Notandi þarf að vera Moderator eða Administrator til að komast inn.");
                 }
             }
             else

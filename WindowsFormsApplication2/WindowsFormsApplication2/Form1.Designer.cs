@@ -80,7 +80,7 @@
             // 
             // signin
             // 
-            this.signin.Location = new System.Drawing.Point(53, 218);
+            this.signin.Location = new System.Drawing.Point(77, 217);
             this.signin.Name = "signin";
             this.signin.Size = new System.Drawing.Size(216, 47);
             this.signin.TabIndex = 5;
@@ -90,7 +90,7 @@
             // 
             // btSkraNotanda
             // 
-            this.btSkraNotanda.Location = new System.Drawing.Point(53, 290);
+            this.btSkraNotanda.Location = new System.Drawing.Point(77, 290);
             this.btSkraNotanda.Name = "btSkraNotanda";
             this.btSkraNotanda.Size = new System.Drawing.Size(216, 46);
             this.btSkraNotanda.TabIndex = 6;
