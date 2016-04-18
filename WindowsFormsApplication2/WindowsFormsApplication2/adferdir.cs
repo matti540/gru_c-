@@ -41,11 +41,10 @@ namespace WindowsFormsApplication2
             }
         }
 
-        public void SettInnSqlToflu(string kt, string nafn, string netfang, string simi)
+        public void SettInnSqlToflu(string fyrirspurn)
         {
             if (OpenConnection() == true)
             {
-                fyrirspurn = "INSERT INTO id (id_medlimur, nafn, netfang, simanumer) VALUES ('" + kt + "','" + nafn + "','" + netfang + "','" + simi + "')";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();

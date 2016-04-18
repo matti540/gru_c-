@@ -30,9 +30,27 @@ namespace WindowsFormsApplication2
             List<string> list = adferd.LesautSQLToflu("SELECT * FROM members WHERE username = '" + username.Text + "' AND password = '" + password.Text + "'");
             if (list.Count() > 0)
             {
-                Form2 form = new Form2();
-                form.Show();
+                string[] upplysingar = list[0].Split(':');
+                if (upplysingar[4] == "Moderator" || upplysingar[4] == "Administrator")
+                {
+                    Form2 form = new Form2();
+                    form.Show();
+                }
+                else 
+                {
+                    MessageBox.Show("Notandi þarf að vera moderator eða administrator til að komast inn.");
+                }
             }
+            else
+            {
+                MessageBox.Show("notandi fannst ekki, Reyndu aftur");
+            }
+        }
+
+        private void btSkraNotanda_Click(object sender, EventArgs e)
+        {
+            SkraNotanda skraningarform = new SkraNotanda();
+            skraningarform.Show();
         }
     }
 }

@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.signin = new System.Windows.Forms.Button();
+            this.btSkraNotanda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // username
@@ -81,17 +82,28 @@
             // 
             this.signin.Location = new System.Drawing.Point(53, 218);
             this.signin.Name = "signin";
-            this.signin.Size = new System.Drawing.Size(216, 88);
+            this.signin.Size = new System.Drawing.Size(216, 47);
             this.signin.TabIndex = 5;
             this.signin.Text = "skrá inn";
             this.signin.UseVisualStyleBackColor = true;
             this.signin.Click += new System.EventHandler(this.signin_Click);
             // 
+            // btSkraNotanda
+            // 
+            this.btSkraNotanda.Location = new System.Drawing.Point(53, 290);
+            this.btSkraNotanda.Name = "btSkraNotanda";
+            this.btSkraNotanda.Size = new System.Drawing.Size(216, 46);
+            this.btSkraNotanda.TabIndex = 6;
+            this.btSkraNotanda.Text = "skrá nýjan notanda";
+            this.btSkraNotanda.UseVisualStyleBackColor = true;
+            this.btSkraNotanda.Click += new System.EventHandler(this.btSkraNotanda_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 333);
+            this.ClientSize = new System.Drawing.Size(381, 348);
+            this.Controls.Add(this.btSkraNotanda);
             this.Controls.Add(this.signin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -114,6 +126,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button signin;
+        private System.Windows.Forms.Button btSkraNotanda;
     }
 }
 
