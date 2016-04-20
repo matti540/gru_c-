@@ -34,19 +34,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.signin = new System.Windows.Forms.Button();
-            this.btSkraNotanda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(120, 103);
+            this.username.Location = new System.Drawing.Point(149, 82);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(149, 20);
             this.username.TabIndex = 0;
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(120, 168);
+            this.password.Location = new System.Drawing.Point(149, 129);
             this.password.Name = "password";
             this.password.PasswordChar = '☺';
             this.password.Size = new System.Drawing.Size(149, 20);
@@ -55,7 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(103, 36);
+            this.label1.Location = new System.Drawing.Point(121, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 13);
             this.label1.TabIndex = 2;
@@ -64,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 106);
+            this.label2.Location = new System.Drawing.Point(74, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 3;
@@ -73,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 171);
+            this.label3.Location = new System.Drawing.Point(74, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 4;
@@ -81,7 +80,7 @@
             // 
             // signin
             // 
-            this.signin.Location = new System.Drawing.Point(77, 217);
+            this.signin.Location = new System.Drawing.Point(89, 196);
             this.signin.Name = "signin";
             this.signin.Size = new System.Drawing.Size(216, 47);
             this.signin.TabIndex = 5;
@@ -89,22 +88,11 @@
             this.signin.UseVisualStyleBackColor = true;
             this.signin.Click += new System.EventHandler(this.signin_Click);
             // 
-            // btSkraNotanda
-            // 
-            this.btSkraNotanda.Location = new System.Drawing.Point(77, 290);
-            this.btSkraNotanda.Name = "btSkraNotanda";
-            this.btSkraNotanda.Size = new System.Drawing.Size(216, 46);
-            this.btSkraNotanda.TabIndex = 6;
-            this.btSkraNotanda.Text = "Skrá nýjan notanda";
-            this.btSkraNotanda.UseVisualStyleBackColor = true;
-            this.btSkraNotanda.Click += new System.EventHandler(this.btSkraNotanda_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(381, 348);
-            this.Controls.Add(this.btSkraNotanda);
+            this.ClientSize = new System.Drawing.Size(381, 284);
             this.Controls.Add(this.signin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -127,7 +115,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button signin;
-        private System.Windows.Forms.Button btSkraNotanda;
     }
 }
 

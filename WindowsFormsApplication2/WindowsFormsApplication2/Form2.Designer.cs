@@ -33,6 +33,8 @@
             this.btBanna = new System.Windows.Forms.Button();
             this.btBreytaUpplysingum = new System.Windows.Forms.Button();
             this.btUnban = new System.Windows.Forms.Button();
+            this.btSkraNyjanNotanda = new System.Windows.Forms.Button();
+            this.btEndurstillaNotanda = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             // 
             // btBanna
             // 
-            this.btBanna.Location = new System.Drawing.Point(404, 433);
+            this.btBanna.Location = new System.Drawing.Point(448, 429);
             this.btBanna.Name = "btBanna";
             this.btBanna.Size = new System.Drawing.Size(112, 23);
             this.btBanna.TabIndex = 1;
@@ -70,7 +72,7 @@
             // 
             // btBreytaUpplysingum
             // 
-            this.btBreytaUpplysingum.Location = new System.Drawing.Point(522, 433);
+            this.btBreytaUpplysingum.Location = new System.Drawing.Point(566, 429);
             this.btBreytaUpplysingum.Name = "btBreytaUpplysingum";
             this.btBreytaUpplysingum.Size = new System.Drawing.Size(112, 23);
             this.btBreytaUpplysingum.TabIndex = 3;
@@ -80,7 +82,7 @@
             // 
             // btUnban
             // 
-            this.btUnban.Location = new System.Drawing.Point(285, 433);
+            this.btUnban.Location = new System.Drawing.Point(329, 429);
             this.btUnban.Name = "btUnban";
             this.btUnban.Size = new System.Drawing.Size(112, 23);
             this.btUnban.TabIndex = 4;
@@ -88,11 +90,33 @@
             this.btUnban.UseVisualStyleBackColor = true;
             this.btUnban.Click += new System.EventHandler(this.btUnban_Click);
             // 
+            // btSkraNyjanNotanda
+            // 
+            this.btSkraNyjanNotanda.Location = new System.Drawing.Point(211, 429);
+            this.btSkraNyjanNotanda.Name = "btSkraNyjanNotanda";
+            this.btSkraNyjanNotanda.Size = new System.Drawing.Size(112, 23);
+            this.btSkraNyjanNotanda.TabIndex = 5;
+            this.btSkraNyjanNotanda.Text = "Skrá nýjan notanda";
+            this.btSkraNyjanNotanda.UseVisualStyleBackColor = true;
+            this.btSkraNyjanNotanda.Click += new System.EventHandler(this.btSkraNyjanNotanda_Click);
+            // 
+            // btEndurstillaNotanda
+            // 
+            this.btEndurstillaNotanda.Location = new System.Drawing.Point(91, 429);
+            this.btEndurstillaNotanda.Name = "btEndurstillaNotanda";
+            this.btEndurstillaNotanda.Size = new System.Drawing.Size(114, 23);
+            this.btEndurstillaNotanda.TabIndex = 6;
+            this.btEndurstillaNotanda.Text = "Endurstilla notanda";
+            this.btEndurstillaNotanda.UseVisualStyleBackColor = true;
+            this.btEndurstillaNotanda.Click += new System.EventHandler(this.btEndurstillaNotanda_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 530);
+            this.Controls.Add(this.btEndurstillaNotanda);
+            this.Controls.Add(this.btSkraNyjanNotanda);
             this.Controls.Add(this.btUnban);
             this.Controls.Add(this.btBreytaUpplysingum);
             this.Controls.Add(this.btBanna);
@@ -112,5 +136,7 @@
         private System.Windows.Forms.Button btBreytaUpplysingum;
         private System.Windows.Forms.ListView listViewNotendur;
         private System.Windows.Forms.Button btUnban;
+        private System.Windows.Forms.Button btSkraNyjanNotanda;
+        private System.Windows.Forms.Button btEndurstillaNotanda;
     }
 }

@@ -53,11 +53,5 @@ namespace WindowsFormsApplication2
                 MessageBox.Show("notandi fannst ekki, Reyndu aftur");
             }
         }
-
-        private void btSkraNotanda_Click(object sender, EventArgs e)
-        {
-            SkraNotanda skraningarform = new SkraNotanda();
-            skraningarform.Show();
-        }
     }
 }

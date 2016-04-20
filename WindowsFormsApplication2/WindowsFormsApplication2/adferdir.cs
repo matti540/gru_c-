@@ -61,7 +61,7 @@ namespace WindowsFormsApplication2
             }
         }
 
-        public string FinnaEinstakling(string id)
+        /*public string FinnaEinstakling(string id)
         {
             string lina = null;
             if (OpenConnection() == true)
@@ -79,13 +79,12 @@ namespace WindowsFormsApplication2
                 sqltenging.Close();
             }
             return lina;
-        }
+        }*/
 
-        public void Eyda(string id)
+        public void Eyda(string fyrirspurn)
         {
             if (OpenConnection() == true)
             {
-                fyrirspurn = "DELETE FROM id WHERE id_medlimur = '" + id + "'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, sqltenging);
                 nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
@@ -114,7 +113,7 @@ namespace WindowsFormsApplication2
             return Faerlsur;
         }
 
-        public string[] FinnaAkvedinOgSkilaTilBaka(string username, string password)
+        /*public string[] FinnaAkvedinOgSkilaTilBaka(string username, string password)
         {
             string[] gogn = new string[5];
             if (OpenConnection() == true)
@@ -135,7 +134,7 @@ namespace WindowsFormsApplication2
                 return gogn;
             }
             return gogn;
-        }
+        }*/
 
         private bool CloseConnection()
         {

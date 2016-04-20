@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 71);
+            this.label1.Location = new System.Drawing.Point(83, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 120);
+            this.label2.Location = new System.Drawing.Point(83, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 1;
@@ -57,22 +57,22 @@
             // 
             // tbNotandanafn
             // 
-            this.tbNotandanafn.Location = new System.Drawing.Point(217, 71);
+            this.tbNotandanafn.Location = new System.Drawing.Point(133, 54);
             this.tbNotandanafn.Name = "tbNotandanafn";
-            this.tbNotandanafn.Size = new System.Drawing.Size(100, 20);
+            this.tbNotandanafn.Size = new System.Drawing.Size(118, 20);
             this.tbNotandanafn.TabIndex = 2;
             // 
             // tbLykilord
             // 
-            this.tbLykilord.Location = new System.Drawing.Point(217, 117);
+            this.tbLykilord.Location = new System.Drawing.Point(133, 104);
             this.tbLykilord.Name = "tbLykilord";
-            this.tbLykilord.Size = new System.Drawing.Size(100, 20);
+            this.tbLykilord.Size = new System.Drawing.Size(118, 20);
             this.tbLykilord.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(106, 176);
+            this.label3.Location = new System.Drawing.Point(83, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 4;
@@ -85,18 +85,18 @@
             "User",
             "Moderator",
             "Administrator"});
-            this.cbrank.Location = new System.Drawing.Point(217, 173);
+            this.cbrank.Location = new System.Drawing.Point(133, 156);
             this.cbrank.Name = "cbrank";
-            this.cbrank.Size = new System.Drawing.Size(121, 21);
+            this.cbrank.Size = new System.Drawing.Size(118, 21);
             this.cbrank.TabIndex = 5;
             // 
             // btSubmit
             // 
-            this.btSubmit.Location = new System.Drawing.Point(152, 231);
+            this.btSubmit.Location = new System.Drawing.Point(85, 214);
             this.btSubmit.Name = "btSubmit";
-            this.btSubmit.Size = new System.Drawing.Size(165, 54);
+            this.btSubmit.Size = new System.Drawing.Size(165, 43);
             this.btSubmit.TabIndex = 6;
-            this.btSubmit.Text = "Breyta";
+            this.btSubmit.Text = "Breyta upplýsingum";
             this.btSubmit.UseVisualStyleBackColor = true;
             this.btSubmit.Click += new System.EventHandler(this.btSubmit_Click);
             // 
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 390);
+            this.ClientSize = new System.Drawing.Size(335, 311);
             this.Controls.Add(this.btSubmit);
             this.Controls.Add(this.cbrank);
             this.Controls.Add(this.label3);
