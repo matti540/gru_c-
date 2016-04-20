@@ -52,18 +52,18 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(37, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 13);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "notandanafn";
+            this.label1.Text = "Notandanafn";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(37, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "lykilorð";
+            this.label2.Text = "Lykilorð";
             // 
             // tbNotandanafn
             // 

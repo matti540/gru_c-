@@ -36,7 +36,12 @@ namespace WindowsFormsApplication2
         // Takki til að breyta upplýsingum um notanda.
         private void btBreytaUpplysingum_Click(object sender, EventArgs e)
         {
-            
+            // Athugar hvort einhver notandi sé valinn.
+            if (listViewNotendur.SelectedItems.Count > 0)
+            {
+                BreytaNotanda breyta = new BreytaNotanda(id);
+                breyta.Show();
+            }
         }
 
         // Bannar notanda
@@ -72,7 +77,21 @@ namespace WindowsFormsApplication2
             List<string> notendur = adferd.LesautSQLToflu("SELECT * FROM members");
             foreach (var notandi in notendur)
             {
-                ListViewItem itm = new ListViewItem(notandi.Split(':'));
+                string[] konni = notandi.Split(':');
+                ListViewItem itm = new ListViewItem(konni);
+                if (konni[5] == "1")
+                {
+                    itm.SubItems[4].BackColor = Color.Red;
+                }
+                else if (konni[4] == "Moderator")
+                {
+                    itm.SubItems[4].BackColor = Color.LightGreen;
+                }
+                else if (konni[4] == "Administrator")
+                {
+                    itm.SubItems[4].BackColor = ColorTranslator.FromHtml("#008ae6");
+                }
+                itm.UseItemStyleForSubItems = false;
                 listViewNotendur.Items.Add(itm);
             }
         }

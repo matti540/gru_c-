@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listViewNotendur = new System.Windows.Forms.ListView();
             this.btBanna = new System.Windows.Forms.Button();
             this.btBreytaUpplysingum = new System.Windows.Forms.Button();
-            this.listViewNotendur = new System.Windows.Forms.ListView();
             this.btUnban = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +44,19 @@
             this.groupBox1.Size = new System.Drawing.Size(610, 401);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "notendur";
+            this.groupBox1.Text = "Notendur";
+            // 
+            // listViewNotendur
+            // 
+            this.listViewNotendur.FullRowSelect = true;
+            this.listViewNotendur.GridLines = true;
+            this.listViewNotendur.Location = new System.Drawing.Point(17, 20);
+            this.listViewNotendur.Name = "listViewNotendur";
+            this.listViewNotendur.Size = new System.Drawing.Size(587, 375);
+            this.listViewNotendur.TabIndex = 0;
+            this.listViewNotendur.UseCompatibleStateImageBehavior = false;
+            this.listViewNotendur.View = System.Windows.Forms.View.Details;
+            this.listViewNotendur.SelectedIndexChanged += new System.EventHandler(this.listViewNotendur_SelectedIndexChanged);
             // 
             // btBanna
             // 
@@ -65,18 +77,6 @@
             this.btBreytaUpplysingum.Text = "Breyta";
             this.btBreytaUpplysingum.UseVisualStyleBackColor = true;
             this.btBreytaUpplysingum.Click += new System.EventHandler(this.btBreytaUpplysingum_Click);
-            // 
-            // listViewNotendur
-            // 
-            this.listViewNotendur.FullRowSelect = true;
-            this.listViewNotendur.GridLines = true;
-            this.listViewNotendur.Location = new System.Drawing.Point(17, 20);
-            this.listViewNotendur.Name = "listViewNotendur";
-            this.listViewNotendur.Size = new System.Drawing.Size(587, 375);
-            this.listViewNotendur.TabIndex = 0;
-            this.listViewNotendur.UseCompatibleStateImageBehavior = false;
-            this.listViewNotendur.View = System.Windows.Forms.View.Details;
-            this.listViewNotendur.SelectedIndexChanged += new System.EventHandler(this.listViewNotendur_SelectedIndexChanged);
             // 
             // btUnban
             // 

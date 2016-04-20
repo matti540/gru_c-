@@ -25,7 +25,16 @@ namespace WindowsFormsApplication2
             string notandanafn = tbNotandanafn.Text;
             string password = tbLykilorð.Text;
             string rank = cbNotandaRank.Text;
-            adferd.SettInnSqlToflu("INSERT INTO members (id, username, password, posts, rank) VALUES (DEFAULT, '" + notandanafn + "', '" + password + "', 0, '" + rank + "')");
+            if (notandanafn.Length > 0 && password.Length > 0 && (rank == "User" || rank == "Moderator" || rank == "Administrator"))
+            {
+                adferd.SettInnSqlToflu("INSERT INTO members (id, username, password, posts, rank) VALUES (DEFAULT, '" + notandanafn + "', '" + password + "', 0, '" + rank + "')");
+                MessageBox.Show("Nýr aðgangur búinn til");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Vinsamlegast fylltu alla kassana til að gera þessa breytingu gilda");
+            }
         }
     }
 }

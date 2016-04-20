@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="adferdir.cs" />
+    <Compile Include="BreytaNotanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BreytaNotanda.Designer.cs">
+      <DependentUpon>BreytaNotanda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="SkraNotanda.Designer.cs">
       <DependentUpon>SkraNotanda.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BreytaNotanda.resx">
+      <DependentUpon>BreytaNotanda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
