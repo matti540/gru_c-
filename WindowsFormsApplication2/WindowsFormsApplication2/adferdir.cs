@@ -18,6 +18,7 @@ namespace WindowsFormsApplication2
         MySqlCommand nySQLskipun;
         MySqlDataReader sqllesari = null;
 
+        // Upplýsingar til að tengjast gagnagrunninum.
         public void TengingVidGagnagrunn()
         {
             server = "82.148.66.15";
@@ -28,6 +29,7 @@ namespace WindowsFormsApplication2
             sqltenging = new MySqlConnection(tengistrengur);
         }
 
+        // Opnar tengingu við gagnagrunninn
         public bool OpenConnection()
         {
             try
@@ -41,6 +43,7 @@ namespace WindowsFormsApplication2
             }
         }
 
+        // Setur eitthvað inn í gagnagrunninn.
         public void SettInnSqlToflu(string fyrirspurn)
         {
             if (OpenConnection() == true)
@@ -51,6 +54,7 @@ namespace WindowsFormsApplication2
             }
         }
 
+        // Uppfærir eitthvað í gagnagrunninum.
         public void Uppfaera(string fyrirspurn)
         {
             if (OpenConnection() == true)
@@ -81,6 +85,7 @@ namespace WindowsFormsApplication2
             return lina;
         }*/
 
+        // Eyðir einhverju úr gagnagrunninum.
         public void Eyda(string fyrirspurn)
         {
             if (OpenConnection() == true)
@@ -91,6 +96,7 @@ namespace WindowsFormsApplication2
             }
         }
 
+        // Les gögn úr gagnagrunninum.
         public List<string> LesautSQLToflu(string fyrirspurn)
         {
             List<string> Faerlsur = new List<string>();
@@ -136,6 +142,7 @@ namespace WindowsFormsApplication2
             return gogn;
         }*/
 
+        // Lokar tengingu á gagnagrunninn.
         private bool CloseConnection()
         {
             try
