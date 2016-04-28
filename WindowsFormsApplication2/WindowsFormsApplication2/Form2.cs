@@ -47,8 +47,21 @@ namespace WindowsFormsApplication2
         // Bannar notanda
         private void btBanna_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             adferd.Uppfaera("UPDATE members SET banned = '1' WHERE id ='" + id + "'");
             BirtaNotendur("SELECT * FROM members");
+=======
+            // Athugar hvort valinn notandi sé Administrator
+            if (listViewNotendur.SelectedItems[0].SubItems[4].Text != "Administrator")
+            {
+                adferd.Uppfaera("UPDATE members SET banned = '1' WHERE id ='" + id + "'");
+                BirtaNotendur();
+            }
+            else
+            {
+                MessageBox.Show("Ekki hægt að banna Administrator");
+            }
+>>>>>>> origin/master
         }
 
         // Afléttir banni á notanda
@@ -70,7 +83,12 @@ namespace WindowsFormsApplication2
             }
         }
 
+<<<<<<< HEAD
         private void BirtaNotendur(string fyrirspurn)
+=======
+        // Birtir alla notendur í töfluna.
+        private void BirtaNotendur()
+>>>>>>> origin/master
         {
             listViewNotendur.Items.Clear();
 
@@ -84,7 +102,7 @@ namespace WindowsFormsApplication2
                     itm.SubItems[5].BackColor = Color.Black;
                     itm.SubItems[5].ForeColor = Color.White;
                 }
-                else if (konni[4] == "Moderator")
+                if (konni[4] == "Moderator")
                 {
                     itm.SubItems[4].BackColor = ColorTranslator.FromHtml("#00e600");
                 }
@@ -120,7 +138,7 @@ namespace WindowsFormsApplication2
                     {
                         adferd.Eyda("DELETE FROM posts WHERE posted_by = '" + id + "'");
                         adferd.Eyda("DELETE FROM threads WHERE creator_id = '" + id + "'");
-                        adferd.Uppfaera("UPDATE members SET posts = '0' AND rank = 'User'");
+                        adferd.Uppfaera("UPDATE members SET posts = '0' AND rank = 'User' WHERE id = '" + id + "'");
                         MessageBox.Show(username + " hefur verið endurstilltur");
                     }
                 }
