@@ -38,14 +38,14 @@
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(149, 82);
+            this.username.Location = new System.Drawing.Point(153, 82);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(149, 20);
             this.username.TabIndex = 0;
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(149, 129);
+            this.password.Location = new System.Drawing.Point(153, 129);
             this.password.Name = "password";
             this.password.PasswordChar = '☺';
             this.password.Size = new System.Drawing.Size(149, 20);
@@ -63,7 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 85);
+            this.label2.Location = new System.Drawing.Point(78, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 3;
@@ -72,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(74, 132);
+            this.label3.Location = new System.Drawing.Point(78, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 4;
@@ -80,7 +80,7 @@
             // 
             // signin
             // 
-            this.signin.Location = new System.Drawing.Point(89, 196);
+            this.signin.Location = new System.Drawing.Point(82, 196);
             this.signin.Name = "signin";
             this.signin.Size = new System.Drawing.Size(216, 47);
             this.signin.TabIndex = 5;

@@ -113,7 +113,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btSubmit);
             this.Name = "SkraNotanda";
-            this.Text = "SkraNotanda";
+            this.Text = "Skrá notanda";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -30,7 +30,7 @@ namespace WindowsFormsApplication2
             listViewNotendur.Columns.Add("Rank", 80);
             listViewNotendur.Columns.Add("Banned", 60);
 
-            BirtaNotendur();
+            BirtaNotendur("SELECT * FROM members");
         }
 
         // Takki til að breyta upplýsingum um notanda.
@@ -48,14 +48,14 @@ namespace WindowsFormsApplication2
         private void btBanna_Click(object sender, EventArgs e)
         {
             adferd.Uppfaera("UPDATE members SET banned = '1' WHERE id ='" + id + "'");
-            BirtaNotendur();
+            BirtaNotendur("SELECT * FROM members");
         }
 
         // Afléttir banni á notanda
         private void btUnban_Click(object sender, EventArgs e)
         {
             adferd.Uppfaera("UPDATE members SET banned = '0' WHERE id ='" + id + "'");
-            BirtaNotendur();
+            BirtaNotendur("SELECT * FROM members");
         }
 
         // Þegar notandi er valinn úr listanum.
@@ -70,18 +70,19 @@ namespace WindowsFormsApplication2
             }
         }
 
-        private void BirtaNotendur()
+        private void BirtaNotendur(string fyrirspurn)
         {
             listViewNotendur.Items.Clear();
 
-            List<string> notendur = adferd.LesautSQLToflu("SELECT * FROM members");
+            List<string> notendur = adferd.LesautSQLToflu(fyrirspurn);
             foreach (var notandi in notendur)
             {
                 string[] konni = notandi.Split(':');
                 ListViewItem itm = new ListViewItem(konni);
                 if (konni[5] == "1")
                 {
-                    itm.SubItems[4].BackColor = Color.Black;
+                    itm.SubItems[5].BackColor = Color.Black;
+                    itm.SubItems[5].ForeColor = Color.White;
                 }
                 else if (konni[4] == "Moderator")
                 {
@@ -128,6 +129,24 @@ namespace WindowsFormsApplication2
                     MessageBox.Show("Ekki hægt að endurstilla Admins");
                 }
             }
+        }
+
+        // Leyfir notanda að nota sína eigin fyrirspurn til að birta notendur.
+        private void btBirtaMedFyrirspurn_Click(object sender, EventArgs e)
+        {
+            if (tbBirtaMedFyrirspurn.Visible)
+            {
+                BirtaNotendur(tbBirtaMedFyrirspurn.Text);
+            }
+
+            lbBirtaMedFyrirspurn.Visible = !lbBirtaMedFyrirspurn.Visible;
+            tbBirtaMedFyrirspurn.Visible = !tbBirtaMedFyrirspurn.Visible;
+        }
+
+        // Birtir alla notendur.
+        private void btBirtaNotendur_Click(object sender, EventArgs e)
+        {
+            BirtaNotendur("SELECT * FROM members");
         }
     }
 }

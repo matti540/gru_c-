@@ -36,6 +36,7 @@ namespace WindowsFormsApplication2
                     if (upplysingar[5] == "0" || upplysingar[4] == "Administrator")
                     {
                         Form2 form = new Form2();
+                        this.Hide();
                         form.Show();
                     }
                     else
