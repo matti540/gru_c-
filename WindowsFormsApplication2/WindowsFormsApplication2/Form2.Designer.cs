@@ -39,6 +39,7 @@
             this.tbBirtaMedFyrirspurn = new System.Windows.Forms.TextBox();
             this.lbBirtaMedFyrirspurn = new System.Windows.Forms.Label();
             this.btBirtaNotendur = new System.Windows.Forms.Button();
+            this.buttonNotaEiginFyrirspurn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,11 +153,23 @@
             this.btBirtaNotendur.UseVisualStyleBackColor = true;
             this.btBirtaNotendur.Click += new System.EventHandler(this.btBirtaNotendur_Click);
             // 
+            // buttonNotaEiginFyrirspurn
+            // 
+            this.buttonNotaEiginFyrirspurn.Location = new System.Drawing.Point(211, 485);
+            this.buttonNotaEiginFyrirspurn.Name = "buttonNotaEiginFyrirspurn";
+            this.buttonNotaEiginFyrirspurn.Size = new System.Drawing.Size(65, 23);
+            this.buttonNotaEiginFyrirspurn.TabIndex = 11;
+            this.buttonNotaEiginFyrirspurn.Text = "OK";
+            this.buttonNotaEiginFyrirspurn.UseVisualStyleBackColor = true;
+            this.buttonNotaEiginFyrirspurn.Visible = false;
+            this.buttonNotaEiginFyrirspurn.Click += new System.EventHandler(this.buttonNotaEiginFyrirspurn_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(696, 530);
+            this.Controls.Add(this.buttonNotaEiginFyrirspurn);
             this.Controls.Add(this.btBirtaNotendur);
             this.Controls.Add(this.lbBirtaMedFyrirspurn);
             this.Controls.Add(this.tbBirtaMedFyrirspurn);
@@ -189,5 +202,6 @@
         private System.Windows.Forms.TextBox tbBirtaMedFyrirspurn;
         private System.Windows.Forms.Label lbBirtaMedFyrirspurn;
         private System.Windows.Forms.Button btBirtaNotendur;
+        private System.Windows.Forms.Button buttonNotaEiginFyrirspurn;
     }
 }

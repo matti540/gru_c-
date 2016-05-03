@@ -47,28 +47,32 @@ namespace WindowsFormsApplication2
         // Bannar notanda
         private void btBanna_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            adferd.Uppfaera("UPDATE members SET banned = '1' WHERE id ='" + id + "'");
+            /*adferd.Uppfaera("UPDATE members SET banned = '1' WHERE id ='" + id + "'");
             BirtaNotendur("SELECT * FROM members");
-=======
-            // Athugar hvort valinn notandi sé Administrator
-            if (listViewNotendur.SelectedItems[0].SubItems[4].Text != "Administrator")
+            */
+            if (listViewNotendur.SelectedItems.Count > 0)
             {
-                adferd.Uppfaera("UPDATE members SET banned = '1' WHERE id ='" + id + "'");
-                BirtaNotendur();
+                // Athugar hvort valinn notandi sé Administrator
+                if (listViewNotendur.SelectedItems[0].SubItems[4].Text != "Administrator")
+                {
+                    adferd.Uppfaera("UPDATE members SET banned = '1' WHERE id ='" + id + "'");
+                    BirtaNotendur("SELECT * FROM members");
+                }
+                else
+                {
+                    MessageBox.Show("Ekki hægt að banna Administrator");
+                }
             }
-            else
-            {
-                MessageBox.Show("Ekki hægt að banna Administrator");
-            }
->>>>>>> origin/master
         }
 
         // Afléttir banni á notanda
         private void btUnban_Click(object sender, EventArgs e)
         {
-            adferd.Uppfaera("UPDATE members SET banned = '0' WHERE id ='" + id + "'");
-            BirtaNotendur("SELECT * FROM members");
+            if (listViewNotendur.SelectedItems.Count > 0)
+            {
+                adferd.Uppfaera("UPDATE members SET banned = '0' WHERE id ='" + id + "'");
+                BirtaNotendur("SELECT * FROM members");
+            }
         }
 
         // Þegar notandi er valinn úr listanum.
@@ -83,12 +87,12 @@ namespace WindowsFormsApplication2
             }
         }
 
-<<<<<<< HEAD
-        private void BirtaNotendur(string fyrirspurn)
-=======
+
+       // private void BirtaNotendur(string fyrirspurn)
+
         // Birtir alla notendur í töfluna.
-        private void BirtaNotendur()
->>>>>>> origin/master
+        private void BirtaNotendur(string fyrirspurn)
+
         {
             listViewNotendur.Items.Clear();
 
@@ -140,6 +144,7 @@ namespace WindowsFormsApplication2
                         adferd.Eyda("DELETE FROM threads WHERE creator_id = '" + id + "'");
                         adferd.Uppfaera("UPDATE members SET posts = '0' AND rank = 'User' WHERE id = '" + id + "'");
                         MessageBox.Show(username + " hefur verið endurstilltur");
+                        BirtaNotendur("SELECT * FROM members");
                     }
                 }
                 else
@@ -152,19 +157,27 @@ namespace WindowsFormsApplication2
         // Leyfir notanda að nota sína eigin fyrirspurn til að birta notendur.
         private void btBirtaMedFyrirspurn_Click(object sender, EventArgs e)
         {
-            if (tbBirtaMedFyrirspurn.Visible)
-            {
-                BirtaNotendur(tbBirtaMedFyrirspurn.Text);
-            }
-
             lbBirtaMedFyrirspurn.Visible = !lbBirtaMedFyrirspurn.Visible;
             tbBirtaMedFyrirspurn.Visible = !tbBirtaMedFyrirspurn.Visible;
+            buttonNotaEiginFyrirspurn.Visible = !buttonNotaEiginFyrirspurn.Visible;
         }
 
         // Birtir alla notendur.
-        private void btBirtaNotendur_Click(object sender, EventArgs e)
+        public void btBirtaNotendur_Click(object sender, EventArgs e)
         {
             BirtaNotendur("SELECT * FROM members");
+        }
+
+        // Keyrir fyrirspurn sem notandinn sló inn.
+        private void buttonNotaEiginFyrirspurn_Click(object sender, EventArgs e)
+        {
+            if (tbBirtaMedFyrirspurn.Visible)
+            {
+                BirtaNotendur(tbBirtaMedFyrirspurn.Text);
+                lbBirtaMedFyrirspurn.Visible = false;
+                tbBirtaMedFyrirspurn.Visible = false;
+                buttonNotaEiginFyrirspurn.Visible = false;
+            }
         }
     }
 }
