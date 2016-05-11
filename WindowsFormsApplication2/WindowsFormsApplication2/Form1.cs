@@ -41,7 +41,7 @@ namespace WindowsFormsApplication2
                     }
                     else
                     {
-                        MessageBox.Show("BANNED");
+                        MessageBox.Show("Aðgangurinn þinn hefur verið bannaður.");
                     }
                 }
                 else 

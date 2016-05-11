@@ -171,7 +171,7 @@ namespace WindowsFormsApplication2
         // Keyrir fyrirspurn sem notandinn sló inn.
         private void buttonNotaEiginFyrirspurn_Click(object sender, EventArgs e)
         {
-            if (tbBirtaMedFyrirspurn.Visible)
+            if (tbBirtaMedFyrirspurn.Visible && listViewNotendur.SelectedItems.Count > 0)
             {
                 BirtaNotendur(tbBirtaMedFyrirspurn.Text);
                 lbBirtaMedFyrirspurn.Visible = false;

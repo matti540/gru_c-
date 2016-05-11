@@ -68,3 +68,4 @@ C:\Users\3010982789\Documents\GitHub\gru_c-sharp\WindowsFormsApplication2\Window
 C:\Users\3010982789\Documents\GitHub\gru_c-sharp\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
 C:\Users\3010982789\Documents\GitHub\gru_c-sharp\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.SkraNotanda.resources
 C:\Users\3010982789\Documents\GitHub\gru_c-sharp\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\0311972019\Documents\GitHub\gru_c-sharp\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.BreytaNotanda.resources
